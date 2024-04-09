@@ -1,0 +1,67 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOoBTpcNvsE1/+hjCgAgx0M",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Dianaepikson/HypatiaAcademy/blob/master/24-04-09ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WopvQAAxUysH",
+        "outputId": "73f06c04-cb5a-4bb8-b715-e6d41c612fbb"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "      name    mass\n",
+            "0  Mercury    0.06\n",
+            "1    Venus    0.82\n",
+            "2    Earth    1.00\n",
+            "3     Mars    0.11\n",
+            "4  Jupiter  317.80\n",
+            "5   Saturn   95.20\n",
+            "6   Uranus   14.60\n",
+            "7  Neptune   17.20\n"
+          ]
+        }
+      ],
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "file = \"https://raw.githubusercontent.com/InterImm/dataset-planets-in-solar-system/master/dataset/planets_in_solar_system.csv\"\n",
+        "df = pd.read_csv(file)\n",
+        "\n",
+        "selected_columns = df[['name', 'mass']]\n",
+        "print(selected_columns)"
+      ]
+    }
+  ]
+}
